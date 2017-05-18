@@ -29,7 +29,7 @@
                 <th>Password</th>
                 <th>Role</th>
             </tr>
-            <s:iterator value="users">
+            <s:iterator value="user">
                 <tr>
                     <td><s:property value="user_id"/></td>
                     <td><s:property value="username"/></td>

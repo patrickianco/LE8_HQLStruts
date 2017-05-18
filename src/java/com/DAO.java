@@ -38,7 +38,7 @@ public class DAO {
       
       try
       {
-         user = s.createQuery("from Users").list();
+         user = (List<Users>) s.createQuery("from Users").list();
       }
       catch(Exception e)
       {
