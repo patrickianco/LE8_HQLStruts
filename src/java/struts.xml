@@ -9,14 +9,12 @@
             <result name="supadm" type="redirect">/superHome.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
+        <!--Super Admin Functions-->
         <action name="superAdd" class="com.SelectAction">
             <result name="success">/superAdd.jsp</result>
         </action>
         <action name="superView" class="com.ViewUserAction">
             <result name="success">/superView.jsp</result>
-        </action>
-        <action name="Logout" class="com.ConnectorAction">
-            <result name="success">/index.jsp</result>
         </action>
         <action name="superAddUser" class="com.AddUserAction">
             <result name="success" type="redirect">superHome.jsp</result>
@@ -25,5 +23,36 @@
             <result name="success">superHome.jsp</result>
         </action>
         
+<<<<<<< HEAD
+=======
+        <!--Admin Functions-->
+        <action name="adminAdd" class="com.SelectAction">
+            <result name="success">/adminAdd.jsp</result>
+        </action>
+        <action name="adminView" class="com.ViewUserAction">
+            <result name="success">/adminView.jsp</result>
+        </action>
+        <action name="tvAdd" class="com.ConnectorAction">
+            <result name="success">/tvAdd.jsp</result>
+        </action>
+        <action name="showView" class="com.ViewShowAction">
+            <result name="success">/tvView.jsp</result>
+        </action>
+        <action name="adminAddUser" class="com.AddUserAction">
+            <result name="success" type="redirect">adminHome.jsp</result>
+        </action>
+        <action name="adminAddShow" class="com.AddShowAction">
+            <result name="success" type="redirect">adminHome.jsp</result>
+        </action>
+        
+        <action name="adminGoBack" class="com.ConnectorAction">
+            <result name="success">adminHome.jsp</result>
+        </action>
+        
+        <!--Logout Function -->
+        <action name="Logout" class="com.ConnectorAction">
+            <result name="success">/index.jsp</result>
+        </action>
+>>>>>>> origin/master
     </package>
 </struts>

@@ -19,6 +19,7 @@ public class AddUserAction extends ActionSupport implements Serializable{
     private String role;
     DAO dao = new DAO();
     
+    @Override
     public String execute(){
         dao.addUser(new Users(username, password, role));
         return "success";
