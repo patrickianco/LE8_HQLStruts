@@ -12,11 +12,17 @@
         <action name="superAdd" class="com.SelectAction">
             <result name="success">/superAdd.jsp</result>
         </action>
+        <action name="superView" class="com.ViewUserAction">
+            <result name="success">/superView.jsp</result>
+        </action>
         <action name="Logout" class="com.ConnectorAction">
             <result name="success">/index.jsp</result>
         </action>
-        <action name="superAddUser" class="com.superAddUserAction">
+        <action name="superAddUser" class="com.AddUserAction">
             <result name="success" type="redirect">superHome.jsp</result>
+        </action>
+        <action name="superGoBack" class="com.ConnectorAction">
+            <result name="success">superHome.jsp</result>
         </action>
     </package>
 </struts>

@@ -13,7 +13,7 @@ import java.io.Serializable;
  *
  * @author Patrick Ian Co
  */
-public class superAddUserAction extends ActionSupport implements Serializable{
+public class AddUserAction extends ActionSupport implements Serializable{
     private String username;
     private String password;
     private String role;

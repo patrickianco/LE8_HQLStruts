@@ -18,7 +18,7 @@ import org.hibernate.service.ServiceRegistry;
  * @author Patrick Ian Co
  */
 public class DAO {
-    List<Users> user = new ArrayList<Users>();
+    List<Users> listUsers = new ArrayList<Users>();
     List<Shows> shows = new ArrayList<Shows>();
     
     private static final SessionFactory factory;
@@ -38,13 +38,13 @@ public class DAO {
       
       try
       {
-         user = (List<Users>) s.createQuery("from Users").list();
+         listUsers = (List<Users>) s.createQuery("from Users").list();
       }
       catch(Exception e)
       {
          e.printStackTrace();
       }
-      return user;
+      return listUsers;
     }
     
     public void addUser(Users u){

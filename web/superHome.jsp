@@ -18,25 +18,12 @@
             <s:submit value="Add Users"/>
         </s:form>
         
+        <s:form action="superView">
+            <s:submit value="View Users"/>
+        </s:form>
+        
         <s:form action="Logout">
             <s:submit value="Logout"/>
         </s:form>
-        
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Role</th>
-            </tr>
-            <s:iterator value="user">
-                <tr>
-                    <td><s:property value="user_id"/></td>
-                    <td><s:property value="username"/></td>
-                    <td><s:property value="password"/></td>
-                    <td><s:property value="role"/></td>
-                </tr>
-            </s:iterator>
-        </table>
     </body>
 </html>

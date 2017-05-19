@@ -24,5 +24,8 @@
                       id="selection"/>
             <s:submit value="Register"/>
         </s:form>
+        <s:form action="superGoBack">
+            <s:submit value="Go Back"/>
+        </s:form>
     </body>
 </html>
