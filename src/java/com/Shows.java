@@ -6,6 +6,7 @@
 package com;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,47 +20,54 @@ import javax.persistence.Id;
 public class Shows implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tv_id;
+    @Column(name = "ID")
+    private Long show_id;
     
     private String title;
-    private int tv_year;
-    private int tv_season;
+    private int show_year;
+    private int show_season;
     
     public Shows(){
         
     }
     
-    public Shows(String title, int tv_year, int tv_season){
+    public Shows(String title, int show_year, int show_season){
         this.title = title;
-        this.tv_year = tv_year;
-        this.tv_season = tv_season;
+        this.show_year = show_year;
+        this.show_season = show_season;
     }
-    
-    public Long getId(){
-        return tv_id;
+
+    public Long getShow_id() {
+        return show_id;
     }
-    
-    public String getTitle(){
+
+    public void setShow_id(Long show_id) {
+        this.show_id = show_id;
+    }
+
+    public String getTitle() {
         return title;
     }
-    
-    public int getYear(){
-        return tv_year;
-    }
-    
-    public int getSeason(){
-        return tv_season;
-    }
-    
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
         this.title = title;
     }
-    
-    public void setYear(int tv_year){
-        this.tv_year = tv_year;
+
+    public int getShow_year() {
+        return show_year;
+    }
+
+    public void setShow_year(int show_year) {
+        this.show_year = show_year;
+    }
+
+    public int getShow_season() {
+        return show_season;
+    }
+
+    public void setShow_season(int show_season) {
+        this.show_season = show_season;
     }
     
-    public void setSeason(int tv_season){
-        this.tv_season = tv_season;
-    }
+    
 }

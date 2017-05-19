@@ -19,7 +19,7 @@ import org.hibernate.service.ServiceRegistry;
  */
 public class DAO {
     List<Users> listUsers = new ArrayList<Users>();
-    List<Shows> shows = new ArrayList<Shows>();
+    List<Shows> listShows = new ArrayList<Shows>();
     
     private static final SessionFactory factory;
     static {
@@ -46,6 +46,23 @@ public class DAO {
       }
       return listUsers;
     }
+
+    public List<Shows> getShows() {
+        Session s = factory.openSession();
+        Transaction t = s.beginTransaction();
+      
+      try
+      {
+         listShows = (List<Shows>) s.createQuery("from Shows").list();
+      }
+      catch(Exception e)
+      {
+         e.printStackTrace();
+      }
+      return listShows;
+    }
+    
+    //User Functions
     
     public void addUser(Users u){
         Session s = factory.openSession();
@@ -55,6 +72,9 @@ public class DAO {
         tx.commit();
         s.close();
     }
+    
+    //TV Show Functions
+    
     public void addShow(Shows sh){
         Session s = factory.openSession();
         Transaction tx = s.beginTransaction();
