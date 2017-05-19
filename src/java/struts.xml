@@ -6,7 +6,7 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         <action name="Login" class="com.LoginAction">
-            <result name="success" type="redirect">/superHome.jsp</result>
+            <result name="supadm" type="redirect">/superHome.jsp</result>
             <result name="input">/index.jsp</result>
         </action>
         <action name="superAdd" class="com.SelectAction">
@@ -24,5 +24,6 @@
         <action name="superGoBack" class="com.ConnectorAction">
             <result name="success">superHome.jsp</result>
         </action>
+        
     </package>
 </struts>

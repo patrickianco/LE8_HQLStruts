@@ -63,4 +63,20 @@ public class DAO {
         tx.commit();
         s.close();
     }
+    
+    public boolean checkLogin(String name, String pass) {
+        boolean status = false;
+            Session s = factory.openSession();
+           List results = s.createQuery("FROM Users").list();
+            for(Iterator it = results.iterator(); it.hasNext();){
+               Users user = (Users) it.next();
+               if(user.getUsername().equals(name) && user.getPassword().equals(pass)){     
+                   status = true;
+            }else{
+                   status = false;
+               }
+            }
+
+        return status;
+    }   
 }
